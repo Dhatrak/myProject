@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="alternate" href="" type="application/atom+xml" title="Atom">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+    <style type="text/css">
+        .placeholder_err::-webkit-input-placeholder {
+            color: red !important;
+        }
+
+        .border_bottom {
+            border-bottom: 2px solid red !important;
+        }
+
+        .form-control,
+        select {
+            border: none;
+            background-color: lightgray;
+            border-radius: 0% !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="margin-left: 80%;">
+            <a href="" class="p-1">Supplier portal</a>
+            <form class="form-inline">
+                <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="serachHide" style="display: hidden"> -->
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="serachShow">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light text-dark bg-white">
+            <img src="logo.png" class="navbar-brand" alt="" height="100px" width="250px">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="margin-left: 10%; margin-top: 60px;">
+                <a class="nav-item nav-link text-dark active" href="#">HOME
+                    <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-item nav-link text-dark" href="#">SOLUTIONS</a>
+                <a class="nav-item nav-link text-dark" href="#">PROJECTS</a>
+                <a class="nav-item nav-link text-dark" href="#">NEWS</a>
+                <a class="nav-item nav-link text-dark" href="#">FLEET</a>
+                <a class="nav-item nav-link text-dark" href="#">ABOUT US</a>
+                <a class="nav-item nav-link text-dark" href="#">CONTACT</a>
+            </div>
+        </nav>
+
+        <div class="jumbotron">
+            <nav class="navbar navbar-expand-sm p-0" style="text-align: left">
+                <ul class="navbar-nav" style="color: black !important">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Home /</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#">Supplier portal /</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link text-dark" href="#">Register as supplier</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>Register as supplier</h1>
+            <p>Bootstrap is the most popular HTML, CSS...</p>
+        </div>
+    </div>
+
+    <!-- @@@=============================Header section end here==========================================@@@ -->
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="row wrapper">
+                <div class="col-lg-3 col-md-3  col-12"></div>
+                <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                    <form action="login.html" id="signupForm" onsubmit="return validate();">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <h3>Core business Offering</h3>
+                                    <p style="font-size: 15px">Please select your core business offering. Additional categories can be added in your
+                                        supplier profile which will be available upon completion of this form.</p>
+                                    <select id="main_menu" class="custom-select form-control mb-3">
+                                        <option selected>Please select</option>
+                                        <option value="php">PHP</option>
+                                        <option value="c">Csharp</option>
+                                        <option value="java">Java</option>
+                                    </select>
+
+                                    <select id="sub_menu" class="custom-select form-control">
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <h3>Company information:</h3>
+                                    <input type="text" class="form-control companyname" name="companyName" id="companyName" placeholder="Company name*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="postalCode" id="postalCode" placeholder="Postal Code*">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="building" id="building" placeholder="Building Name / Number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="street" id="street" placeholder="Street 1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="street2" id="street" placeholder="Street 2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="city" id="city" placeholder="City">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="county" id="county" placeholder="Country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="country" id="country" placeholder="Country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" name="telphone" id="telephone" placeholder="Telephone number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="website" id="website" placeholder="Website">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group" id="hiddengroup">
+                                    <input type="text" class="form-control" id="registered" placeholder="Tell us where you have registered office located">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group flex" id="TextBoxesGroup">
+                    <input type="text" class="form-control" id='textbox1' onfocus="this.value=''" value="Relevant certifications,accreditions and industry memberships">
+                </div> -->
+                        <!-- add text field -->
+                        <div class="row">
+                            <div id="demo" class="form-group col-lg-8 col-md-8 col-sm-12 col-12"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+
+                                <div class="form-group">
+                                    <input type="button" value="+" class="rounded-circle" id="add" onclick="display()">
+                                    <span>Add another</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div id="demo" class="form-group"></div> -->
+                        <!-- <input type="button" value="Add" onclick="display()"> -->
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <h3>Supporting information:</h3>
+                                    <textarea class="form-control" id="textarea" placeholder="Supporting comments" rows="3"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group flex" id="TextBoxesGroup">
+                                    <input type="text" class="form-control" id='textbox1' name="relevant" placeholder="Relevant certifications,accreditions and industry memberships">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+                                <span style="font-size: 12px">please indicate any that are pending</span>
+                            </div>
+                        </div>
+                        <!-- add text field -->
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div id="demo1" class="form-group"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!-- <button class="rounded-circle" id="addButton">+</button> -->
+                            <input type="button" value="+" class="rounded-circle" id="add" onclick="display1()">
+
+                            <span>Add another</span>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group inputBtn">
+                                    <h5>Upload company presentation</h5>
+                                    <input type="file" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <h3>Primary contact:</h3>
+                                    <input type="text" class="form-control" placeholder="First name*" id="firstname" name="firstname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="lastname" placeholder="Surname*" id="lastname">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control email" placeholder="Email*" id="email" name="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Create password*" name="password" id="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label" for="exampleCheck1">Click here to agree to
+                                        <a href="">OHT Privacy Policy</a>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn1 sign">Sign up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $('.sign').click(function (e) {
+            var isValid = true;
+            $('#firstname,#lastname,#email,#companyName').each(function () {
+                $(this).addClass('placeholder_err');
+                $(this).addClass('border_bottom');
+                if ($.trim($(this).val()) == '') {
+                    isValid = false;
+
+                    $(this).css({
+                        "border-bottom": "2px solid red",
+                    });
+                }
+                else {
+                    $(this).css({
+                        "border": "1px solid green",
+                        "background": ""
+                    });
+                }
+            });
+            if (isValid == false)
+                e.preventDefault();
+        });
+    </script>
+
+</body>
+
+</html>
